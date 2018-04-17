@@ -12,6 +12,16 @@ export default {
       sLoginPassword: ''
     }
   },
+created: function(){
+    firebase.auth().onAuthStateChanged((user) => {
+      this.props_objuser = user
+      if(user){
+        this.props_blIsLoggedIn = true
+      }else {
+        this.props_blIsLoggedIn = false
+      }
+    })
+  },
   computed: {
 
   },
@@ -44,6 +54,9 @@ export default {
         alert("Error en el login " + err);
       }
     );
-    }
+  },
+  Logout: function(event){
+    firebase.auth().signOut()
+  }
   }
 }

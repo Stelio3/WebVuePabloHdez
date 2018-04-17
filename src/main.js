@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import firebase from 'firebase'
+import props from './mixins/props'
 
 Vue.config.productionTip = false
 
@@ -16,6 +17,8 @@ var config = {
    messagingSenderId: '347909009323'
  };
  firebase.initializeApp(config);
+
+Vue.mixin(props)
 
 /* eslint-disable no-new */
 new Vue({
