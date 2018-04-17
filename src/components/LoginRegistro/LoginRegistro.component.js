@@ -1,4 +1,6 @@
 import firebase from 'firebase'
+import { EventBus } from '../../Events/events_bus'
+
 export default {
   name: 'login-registro',
   components: {},
@@ -20,6 +22,7 @@ created: function(){
       }else {
         this.props_blIsLoggedIn = false
       }
+      EventBus.$emit('loginregistro_userstatechanged',this.props_blIsLoggedIn)
     })
   },
   computed: {
