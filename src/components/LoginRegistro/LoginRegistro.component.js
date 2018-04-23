@@ -19,6 +19,17 @@ created: function(){
       this.props_objuser = user
       if(user){
         this.props_blIsLoggedIn = true
+        var docRef = db.collection("Perfiles").doc(user.getIdToken())
+          docRef.get().then(function(doc) {
+          if (doc.exists) {
+          //  console.log("Document data:", doc.data());
+          } else {
+            // doc.data() will be undefined in this case
+            console.log("No existe ese documento");
+          }
+        }).catch(function(error) {
+          console.log("Error getting document:", error);
+        });
       }else {
         this.props_blIsLoggedIn = false
       }

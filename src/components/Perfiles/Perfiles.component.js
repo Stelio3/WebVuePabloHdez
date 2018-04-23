@@ -5,7 +5,6 @@ class Perfil{
   constructor(id, datos){
     this.id = id
     this.name = datos.nombre
-    this.imagen = datos.url_image
     console.log("NOMBRE Perfil: " + this.name)
   }
 }
