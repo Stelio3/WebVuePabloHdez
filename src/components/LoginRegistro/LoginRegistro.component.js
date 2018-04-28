@@ -53,6 +53,8 @@ created: function(){
     btnRegistrarse: function (event) {
       firebase.auth().createUserWithEmailAndPassword(this.sRegisterEmail,this.sRegisterPassword).then(
         function(user){
+          var docRef = firebase.firestore().collection("Perfiles")
+          docRef.doc(user.uid+"").set({nombre:"Pablo"})
           alert("Tu cuenta fue creada!!"+ user.name);
       },
       function(err){
