@@ -10,7 +10,7 @@ class Perfil{
 }
 
 export default {
-  name: 'perfiles',
+  name: 'Perfiles',
   components: {},
   props: [],
   data () {
