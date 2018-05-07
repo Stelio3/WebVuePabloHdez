@@ -1,11 +1,13 @@
 import LoginRegistro from '@/components/LoginRegistro'
 import Perfiles from '@/components/Perfiles'
+import Inicio from '@/components/Inicio'
 import { EventBus } from '../../Events/events_bus'
 
 export default {
   name: 'principal',
   components: {'loginregistro':LoginRegistro,
-  'perfiles':Perfiles},
+  'perfiles':Perfiles,
+  'inicio':Inicio},
   props: [],
   data () {
     return {

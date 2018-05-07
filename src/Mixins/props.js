@@ -2,6 +2,7 @@ class Perfil{
   constructor(id, datos){
     this.id = id
     this.name = datos.nombre
+    this.email = datos.email
     console.log("NOMBRE Perfil: " + this.name)
   }
 }
