@@ -17,8 +17,11 @@
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
-
+        <div class="providers">
+        <button v-on:click="btnRegistrarFacebook"><img src="../../assets/logoFacebook.png" alt="Facebook" height = "50px" width = "50px"> </button>
+        <button v-on:click="btnRegistrarGoogle"><img src="../../assets/logoGoogle.png" alt="Facebook" height = "50px" width = "50px"> </button>
       </div>
+    </div>
 
       <div class="panelregister"  v-show="!blLoginVisible">
         <label for="uname"><b>Email</b></label>

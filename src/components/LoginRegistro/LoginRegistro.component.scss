@@ -21,6 +21,10 @@ button {
     cursor: pointer;
     width: 100%;
 }
+.providers{
+  width: 25%;
+  display: flex;
+}
 
 /* Add a hover effect for buttons */
 button:hover {
