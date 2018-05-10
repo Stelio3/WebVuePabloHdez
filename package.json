@@ -12,12 +12,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "firebase": "^4.12.0",
     "node-sass": "^4.8.3",
+    "npm": "^6.0.0",
     "sass-loader": "^7.0.1",
     "vgc": "0.0.1-prealpha4",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
-    "firebase": "^4.12.0"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
