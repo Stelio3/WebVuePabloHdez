@@ -1,12 +1,14 @@
 
-<section class="menu-principal">
+<section class="menu-principal" v-show="!props_blIsLoggedIn">
   <div class="titulo">
     <h1>IGAhorros</h1>
   </div>
+  <div class="botones">
   <div class="ingreso">
     <button>Nuevo Ingreso</button>
   </div>
   <div class="gasto">
     <button>Nuevo Gasto</button>
   </div>
+</div>
 </section>

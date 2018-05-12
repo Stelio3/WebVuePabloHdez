@@ -1,6 +1,11 @@
 .menu-principal {
   display: flex;
+  justify-content: space-around;
 
+  .botones{
+    display: flex;
+    flex-direction: row;
+  }
   button {
     background-color: green;
     color: white;
