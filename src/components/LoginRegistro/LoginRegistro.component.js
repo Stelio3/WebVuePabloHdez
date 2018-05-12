@@ -54,7 +54,7 @@ created: function(){
 
   var docRef = firebase.firestore().collection("Perfiles")
   docRef.doc(user.uid+"").set({email: user.email, nombre:"Pablo"})
-  alert("Tu cuenta fue creada!!"+ user.email);
+  alert("Bienvenido!! "+ user.email);
   // ...
 }).catch(function(error) {
   // Handle Errors here.
@@ -77,7 +77,7 @@ created: function(){
 
     var docRef = firebase.firestore().collection("Perfiles")
     docRef.doc(user.uid+"").set({email: user.email, nombre:"Pablo"})
-    alert("Tu cuenta fue creada!!"+ user.email);
+    alert("Bienvenido!! "+ user.email);
 
     // ...
   }).catch(function(error) {
@@ -102,7 +102,7 @@ created: function(){
         function(user){
           var docRef = firebase.firestore().collection("Perfiles")
           docRef.doc(user.uid+"").set({email: user.email, nombre:"Pablo"})
-          alert("Tu cuenta fue creada!!"+ user.email);
+          alert("Tu cuenta fue creada!! "+ user.email);
       },
       function(err){
         alert("Error en la creacion de cuenta " + err);
