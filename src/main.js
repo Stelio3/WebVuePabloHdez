@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import firebase from 'firebase'
-import props from './mixins/props'
+import props from './Mixins/props'
 import firestore from 'firebase/firestore'
 
 Vue.config.productionTip = false

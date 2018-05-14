@@ -1,5 +1,6 @@
 import firebase from 'firebase'
 import { EventBus } from '../../Events/events_bus'
+import { Perfil } from '../../Mixins/props'
 
 export default {
   name: 'login-registro',
@@ -16,14 +17,17 @@ export default {
   },
 created: function(){
     firebase.auth().onAuthStateChanged((user) => {
+      var that = this
       this.props_objuser = user
       if(user){
         this.props_blIsLoggedIn = true
         var docRef = firebase.firestore().collection("Perfiles").doc(user.uid+"")
           docRef.get().then(function(doc) {
           if (doc.exists) {
-          //  console.log("Document data:", doc.data());
-          this.setPerfil(doc.id, doc.data())
+            console.log("Document data:", doc.data());
+            that.props_docPerfil = new Perfil(doc.id, doc.data());
+            console.log("---------->>>>>>>>>>>>>>>>>> "+that.props_docPerfil.id)
+            EventBus.$emit('loginregistro_perfildescargado',that.props_docPerfil)
           } else {
             // doc.data() will be undefined in this case
             console.log("No existe ese documento");
